@@ -1,3 +1,16 @@
+/*********************************************************************************
+
+WEB322 – Assignment 02
+I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  No part *  of this assignment has been copied manually or electronically from any other source (including 3rd party web sites) or distributed to other students.
+
+Name: __Nareen Ibrahim____________________ 
+Student ID: __169115235____________ 
+Date: __Feb 4, 2025______________
+Cyclic Web App URL: (Replit) https://9e8aa244-bf08-4716-8f87-26342499db02-00-3ejyfx7cxw7f4.kirk.replit.dev/
+GitHub Repository URL: https://github.com/nareenIB/web322-app.git
+
+********************************************************************************/ 
+
 const express = require('express');
 const path = require('path');
 const app = express();
