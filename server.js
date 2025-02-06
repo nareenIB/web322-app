@@ -6,7 +6,7 @@ I declare that this assignment is my own work in accordance with Seneca  Academi
 Name: __Nareen Ibrahim____________________ 
 Student ID: __169115235____________ 
 Date: __Feb 4, 2025______________
-Cyclic Web App URL: (Replit) https://9e8aa244-bf08-4716-8f87-26342499db02-00-3ejyfx7cxw7f4.kirk.replit.dev/
+Cyclic Web App URL: I used Github Pages https://nareenib.github.io/web322-app.github.io/
 GitHub Repository URL: https://github.com/nareenIB/web322-app.git
 
 ********************************************************************************/ 
