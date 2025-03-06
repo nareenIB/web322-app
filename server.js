@@ -10,7 +10,7 @@ Student ID: __169115235____________
 Date: __Mar 5, 2025______________
 
 Cyclic Web App URL:
-Replit Cover Page URL: https://0c281d2b-eb67-4a88-88fa-59715976fea7-00-gpxpeedr6lgg.kirk.replit.dev/
+Replit Cover Page URL: https://cf6fc9ed-df80-4c87-bc97-929d90fdf80e-00-3i6ze0eqkcqtw.riker.replit.dev/
 GitHub Repository URL: https://github.com/nareenIB/web322-app.git
 ********************************************************************************/ 
 
