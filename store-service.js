@@ -29,6 +29,56 @@ function getAllItems() {
   });
 }
 
+function getItems(category, minDate) {
+  return new Promise((resolve, reject) => {
+      let filteredItems = itemsData;  // 'itemsData' is your array of items
+
+      if (category) {
+          filteredItems = filteredItems.filter(item => item.category === category);
+      }
+
+      if (minDate) {
+          const minDateObj = new Date(minDate);
+          filteredItems = filteredItems.filter(item => new Date(item.postDate) >= minDateObj);
+      }
+
+      resolve(filteredItems);
+  });
+}
+
+function getItemById(id) {
+  return new Promise((resolve, reject) => {
+      const item = items.find(item => item.id == id);
+      if (!item) {
+          reject("No result returned");
+      } else {
+          resolve(item);
+      }
+  });
+}
+
+
+function getItemsByCategory(category) {
+  return new Promise((resolve, reject) => {
+      const filteredItems = items.filter(item => item.category == category);
+      if (filteredItems.length === 0) {
+          reject("No results returned");
+      } else {
+          resolve(filteredItems);
+      }
+  });
+}
+
+function getItemsByMinDate(minDateStr) {
+  return new Promise((resolve, reject) => {
+      const filteredItems = items.filter(item => new Date(item.postDate) >= new Date(minDateStr));
+      if (filteredItems.length === 0) {
+          reject("No results returned");
+      } else {
+          resolve(filteredItems);
+      }
+  });
+}
 
 
 function getPublishedItems() {
@@ -48,4 +98,31 @@ function getCategories() {
   });
 }
 
-module.exports = { initialize, getAllItems, getPublishedItems, getCategories };
+function addItem(itemData) {
+  return new Promise((resolve, reject) => {
+    if (itemData.published === undefined) {
+      itemData.published = false;
+    }
+    itemData.id = items.length + 1;
+    items.push(itemData);
+
+    fs.writeFile('./data/items.json', JSON.stringify(items, null, 2), (err) => {
+      if (err) {
+        reject('Error saving item');
+      } else {
+        resolve(itemData);
+      }
+    });
+  });
+}
+
+
+module.exports = { initialize,
+                   getAllItems,
+                   getPublishedItems,
+                   getCategories,
+                   addItem,
+                   getItems,
+                   getItemById,
+                   getItemsByCategory,
+                   getItemsByMinDate};
