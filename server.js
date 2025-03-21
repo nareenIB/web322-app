@@ -9,7 +9,7 @@
 * Date: Mar 20, 2025
 *
 * Cyclic Web App URL:
-* Replit Cover Page URL: https://replit.com/@nibrahim32/web322-app?v=1#README.md
+* Replit Cover Page URL: replit.com/@nibrahim32/web322-app?v=1
 * GitHub Repository URL: https://github.com/nareenIB/web322-app.git
 ********************************************************************************/
 
