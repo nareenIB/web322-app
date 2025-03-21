@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Categories</h2>
+    <hr />
+    <% if (categories.length > 0) { %>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% categories.forEach(category => { %>
+                        <tr>
+                            <td><a href="/items?category=<%= category.id %>"><%= category.id %></a></td>
+                            <td><a href="/items?category=<%= category.id %>"><%= category.name %></a></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    <% } else { %>
+        <div class="text-center">
+            <strong><%= message || "No categories available" %></strong>
+        </div>
+    <% } %>
+</div>
